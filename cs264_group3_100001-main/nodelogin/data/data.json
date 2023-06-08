@@ -1,0 +1,131 @@
+[
+    {
+        "date": "24/11/2565",
+        "status": "ได้รับการอนุมัติแล้ว",
+        "form": "เพิ่มรายวิชา",
+        "studentFirstName": "ธรรม์",
+        "studentLastName": "บรรพกาญจน์",
+        "studentId": "6409682744",
+        "studentYear": "year2",
+        "studyField": "สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์ประยุกต์)",
+        "advisor": "อ.ทรงศักดิ์",
+        "addressNumber": "88",
+        "moo": "8",
+        "tumbol": "รังสิต",
+        "amphur": "รังสิต",
+        "province": "ปทุมธานี",
+        "postalCode": "12130",
+        "mobilePhone": "0987654321",
+        "phone": "",
+        "cause": "ต้องการลงทะเบียนเพิ่ม",
+        "subjectCode": "CS264",
+        "addSubjectList": [
+        {
+            "subjectCode": "CS264",
+            "subjectName": "software engineer",
+            "subjectSection": "870001",
+            "subjectDate": "พุธ 15:00 - 16:30,ศุกร์ 15:00 - 16:30",
+            "subjectCredit": "3",
+            "subjectTeacher": "อ.ทรงศักดิ์",
+            "subjectTeacherCheck": true
+        }
+        ],
+        "dropSubjectList": []
+    },
+    {
+        "date": "24/11/2565",
+        "status": "กำลังดำเนินการ",
+        "form": "เพิ่มรายวิชา",
+        "studentFirstName": "สมศรี",
+        "studentLastName": "รรรรรร",
+        "studentId": "6543456789",
+        "studentYear": "year1",
+        "studyField": "สาขาวิชาคณิตศาสตร์ประยุกต์",
+        "advisor": "อ.ปริญญา",
+        "addressNumber": "ุ6/47",
+        "moo": "5",
+        "tumbol": "สนามบิน",
+        "amphur": "ดอนเมือง",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": "10210",
+        "mobilePhone": "0998887777",
+        "phone": "",
+        "cause": "ต้องการลงทะเบียนเพิ่ม",
+        "addSubjectList": [
+          {
+            "subjectCode": "ST216",
+            "subjectName": "สถิติ",
+            "subjectSection": "090001",
+            "subjectDate": "พุธ 13:30 - 15:00,ศุกร์ 13:30 - 15:00",
+            "subjectCredit": "3",
+            "subjectTeacher": "อ.รัตติกร",
+            "subjectTeacherCheck": true
+          }
+        ],
+        "dropSubjectList": []
+    },
+    {
+        "date": "24/11/2565",
+        "status": "กำลังดำเนินการ",
+        "form": "ถอนรายวิชา",
+        "studentFirstName": "ผักโขม",
+        "studentLastName": "หวู",
+        "studentId": "6409674567",
+        "studentYear": "year2",
+        "studyField": "สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์ประยุกต์)",
+        "advisor": "อ.ทรงศักดิ์",
+        "addressNumber": "55",
+        "moo": "10",
+        "tumbol": "หนองค้างพลู",
+        "amphur": "หนองแขม",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": "10160",
+        "mobilePhone": "0675648080",
+        "phone": "",
+        "cause": "สอบไม่ผ่าน",
+        "addSubjectList": [
+          {
+            "subjectCode": "CS300",
+            "subjectName": "seminar in practical programming",
+            "subjectSection": "820003",
+            "subjectDate": "จันทร์ 13:00 - 16:00,  - ",
+            "subjectCredit": "1",
+            "subjectTeacher": "อ.นุชชากร",
+            "subjectTeacherCheck": true
+          }
+        ],
+        "dropSubjectList": []
+    },
+    {
+      "date": "25/11/2565",
+      "status": "ได้รับการอนุมัติแล้ว",
+      "form": "ถอนรายวิชา (Drop W)",
+      "studentFirstName": "วีรกิจ",
+      "studentLastName": "ภณิฑภณฒ์",
+      "studentId": "6409691369",
+      "studentYear": "year2",
+      "studyField": "สาขาวิชาวิทยาศาสตร์และนวัตกรรมทางอาหาร",
+      "advisor": "อ.ฐาปนา",
+      "addressNumber": "69",
+      "moo": "9",
+      "tumbol": "มหาชัย",
+      "amphur": "เมือง",
+      "province": "สมุทรสาคร",
+      "postalCode": "74000",
+      "mobilePhone": "0696968676",
+      "phone": "",
+      "cause": "งานเยอะมาก ทำไม่ทัน",
+      "addSubjectList": [
+        {
+          "subjectCode": "CS264",
+          "subjectName": "software engineer",
+          "subjectSection": "870001",
+          "subjectDate": "พุธ 15:00 - 16:30,ศุกร์ 15:00 - 16:30",
+          "subjectCredit": "3",
+          "subjectTeacher": "อ.วีรกิจ",
+          "subjectTeacherCheck": true
+        }
+      ],
+      "dropSubjectList": []
+    }
+]

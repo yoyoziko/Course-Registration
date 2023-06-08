@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<title>ตรวจสอบสถานะคำร้อง</title>
+		<head>
+
+				<link rel="icon" type="image/x-ico" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Emblem_of_Thammasat_University.svg/1200px-Emblem_of_Thammasat_University.svg.png">
+				
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Emblem_of_Thammasat_University.svg/1024px-Emblem_of_Thammasat_University.svg.png" height="130" align = 'right'; style="margin-right:20px;margin-top:30px">	
+		<br>
+            <h1 align="right" style="color:#C3002F"><i>ตรวจสอบสถานะคำร้อง</i>&emsp;</h1>
+            <h2 align="right" >คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต &emsp;</h2>
+            <br>
+				<div style="border-bottom: 10px solid #C3002F;margin-left:30px;margin-right:30px;"></div> 
+				<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+			<style>
+			
+				html{
+        			background-color: rgba(255, 209, 63,0.8);
+    				}
+			
+				input{
+		 					font-family: 'Prompt', sans-serif;
+		 					background-color: rgba(235, 235, 235, 0.0);
+		 					border-radius: 25px;
+		 					font-size :15px;
+     			 	}
+			
+				select{
+		 					font-family: 'Prompt', sans-serif;
+		 					font-size :15px;
+     					}	
+			
+				table {
+          		border-collapse: collapse;
+          		width: 100%;
+          		font-size :18px;
+        	}td{
+         			border: 1px solid #dddddd;
+          		text-align: center;
+          		padding: 5px;
+          		font-size :18px;
+        		}
+      	 tr:nth-child(even) {
+              background-color:white;
+              font-size :18px;
+        		}
+			
+				h1 {
+				 	font-size :30px;
+				 
+				 	}
+	
+				h2 {
+					font-size :20px;
+					margin-top: 25px;
+						}
+    
+    		body{
+        		font-family: 'Prompt', sans-serif;
+     				margin: 20px 20px;
+     				background-color: rgba(235, 235, 235, 0.7);
+    				}
+    
+    		fieldset{
+    					border-radius: 18px;
+    				}
+
+    		textarea{
+          	resize: none;
+            		}
+    	
+    		button{
+      				background-color: ;
+    					} 
+
+    		input:focus {
+              border-color: #DF7861;
+              transition: 0.5s;
+            	}			    
+			
+				input#numberAdd {
+  						width: 70px;
+  						text-align: center;
+							}
+			
+				input#numberWithdraw {
+  						width: 70px;
+  						text-align: center;
+							}
+			
+				.margin{
+							margin: 2%;
+							}  
+				label{
+							font-size: 18px;
+				}	 
+				input#allowAdd {
+					width: 20px;
+					height: 20px;
+				}
+				.sub{
+					text-align: center;
+					padding: 20px;
+				}
+		
+				.button-17 {
+       		align-items: center;
+       		appearance: none;
+       		background-color: #fff;
+       		border-radius: 24px;
+       		border-style: none;
+       		box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+       		box-sizing: border-box;
+       		color: #3c4043;
+       		cursor: pointer;
+       		display: inline-flex;
+       		fill: currentcolor;
+       		font-family: "Google Sans",Roboto,Arial,sans-serif;
+       		font-size: 14px;
+  				font-weight: 500;
+  				height: 48px;
+  				justify-content: center;
+  				letter-spacing: .25px;
+  				line-height: normal;
+  				max-width: 100%;
+  				overflow: visible;
+  				padding: 2px 24px;
+  				position: relative;
+  				text-align: center;
+  				text-transform: none;
+  				transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  				user-select: none;
+  				-webkit-user-select: none;
+  				touch-action: manipulation;
+  				width: auto;
+  				will-change: transform,opacity;
+  				z-index: 0;
+				}
+
+				.button-17:hover {
+				  background: #F6F9FE;
+				  color: #174ea6;
+				}
+
+				.button-17:active {
+  				box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  				outline: none;
+				}
+
+				.button-17:focus {
+				  outline: none;
+				  border: 2px solid #4285f4;
+				}
+
+				.button-17:not(:disabled) {
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				}
+
+				.button-17:not(:disabled):hover {
+				  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+				}
+
+				
+				.button-17:not(:disabled):focus {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				
+				}
+
+				
+				.button-17:not(:disabled):active {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+				
+				}
+
+				
+				.button-17:disabled {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				
+				}
+		</style>
+</head>
+
+<body>
+	<div class="container"></div>
+	<div class="margin">
+		<form action="/action_page.php" id="input_form">	
+
+				<div class="date" align="right" margin style="margin-right: 20px;font-size :18px"><b>วันที่/เดือน/ปี ::</b>	
+							<label for="date" id="date"></label>			
+				</div>
+
+		<h2 style="margin-left: 20px;">กำลังดำเนินการ</h2>
+
+		<fieldset style="margin: 20px;"><!-- เป็นต้นแบบ โดยจะแสดงผลตามข้อมูลในระบบ -->
+				<label><b>เรื่อง :</b> เพิ่มรายวิชา CS264</label><br>
+				<label><b>สถานะ :</b> รอการอนุมัติจาก คณบดี</label>
+		</fieldset>
+		<fieldset style="margin: 20px;">
+				<label><b>เรื่อง :</b> ถอนรายวิชา CS213</label><br>
+				<label><b>สถานะ :</b> รอการอนุมัติจาก คณบดี</label>
+		</fieldset>
+
+		<h2 style="margin-left: 20px;">ดำเนินการเรียบร้อยแล้ว</h2>
+
+		<fieldset style="margin: 20px;">
+				<label><b>เรื่อง :</b> ถอนรายวิชา (Drop W) CS300</label><br>
+				<label><b>สถานะ :</b> คำร้องได้รับการอนุมัติแล้ว</label>
+		</fieldset>
+     
+     <br>
+
+		</form>
+	</div>
+
+</body>
+<script src="controller3.js">
+
+</script>
+
+</html>

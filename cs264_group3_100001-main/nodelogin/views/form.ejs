@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+<html>
+	<title>คำร้องขอเพิ่มถอนรายวิชา</title>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+			
+				html{
+        			background-color: rgba(255, 209, 63,0.8);
+    				}
+			
+				input{
+		 					font-family: 'Prompt', sans-serif;
+		 					background-color: rgba(235, 235, 235, 0.0);
+		 					border-radius: 25px;
+		 					font-size :15px;
+     			 	}
+			
+				select{
+		 					font-family: 'Prompt', sans-serif;
+		 					font-size :15px;
+     					}	
+			
+				table {
+          		border-collapse: collapse;
+          		width: 100%;
+          		font-size :18px;
+        	}td{
+         			border: 1px solid #dddddd;
+          		text-align: center;
+          		padding: 5px;
+          		font-size :18px;
+        		}
+      	 tr:nth-child(even) {
+              background-color:white;
+              font-size :18px;
+        		}
+			
+				h1 {
+				 	font-size :30px;
+				 
+				 	}
+	
+				h2 {
+					font-size :20px;
+					margin-top: 25px;
+						}
+    
+    		body{
+        		font-family: 'Prompt', sans-serif;
+     				margin: 20px 20px;
+     				background-color: rgba(235, 235, 235, 0.7);
+    				}
+    
+    		fieldset{
+    					border-radius: 18px;
+    				}
+
+    		textarea{
+          	resize: none;
+            		}
+    	
+    		button{
+      				background-color: ;
+    					} 
+
+    		input:focus {
+              border-color: #DF7861;
+              transition: 0.5s;
+            	}			    
+			
+				input#numberAdd {
+  						width: 70px;
+  						text-align: center;
+							}
+			
+				input#numberWithdraw {
+  						width: 70px;
+  						text-align: center;
+							}
+			
+				.margin{
+							margin: 2%;
+							}  
+				label{
+							font-size: 18px;
+				}	 
+				input#allowAdd {
+					width: 20px;
+					height: 20px;
+				}
+				.sub{
+					text-align: center;
+					padding: 20px;
+				}
+		
+				.button-17 {
+       		align-items: center;
+       		appearance: none;
+       		background-color: #fff;
+       		border-radius: 24px;
+       		border-style: none;
+       		box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+       		box-sizing: border-box;
+       		color: #3c4043;
+       		cursor: pointer;
+       		display: inline-flex;
+       		fill: currentcolor;
+       		font-family: "Google Sans",Roboto,Arial,sans-serif;
+       		font-size: 14px;
+  				font-weight: 500;
+  				height: 48px;
+  				justify-content: center;
+  				letter-spacing: .25px;
+  				line-height: normal;
+  				max-width: 100%;
+  				overflow: visible;
+  				padding: 2px 24px;
+  				position: relative;
+  				text-align: center;
+  				text-transform: none;
+  				transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  				user-select: none;
+  				-webkit-user-select: none;
+  				touch-action: manipulation;
+  				width: auto;
+  				will-change: transform,opacity;
+  				z-index: 0;
+				}
+
+				.button-17:hover {
+				  background: #F6F9FE;
+				  color: #174ea6;
+				}
+
+				.button-17:active {
+  				box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  				outline: none;
+				}
+
+				.button-17:focus {
+				  outline: none;
+				  border: 2px solid #4285f4;
+				}
+
+				.button-17:not(:disabled) {
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				}
+
+				.button-17:not(:disabled):hover {
+				  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+				}
+
+				
+				.button-17:not(:disabled):focus {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				
+				}
+
+				
+				.button-17:not(:disabled):active {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+				
+				}
+
+				
+				.button-17:disabled {
+				
+				  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+				
+				}
+
+				.sidenav {
+      			height: 100%;
+      			width: 0;
+				position: fixed;
+				z-index: 4;
+				top: 0;
+				left: 0;
+				background-color: #070A16;
+				overflow-x: hidden;
+				transition: 0.5s;
+				padding-top: 60px;
+				}
+				
+				.sidenav a {
+				padding: 8px 8px 8px 20px;
+				text-decoration: none;
+				font-size: 18px;
+				color: #818181;
+				display: block;
+				transition: 0.3s;
+				}
+				
+				.sidenav a:hover {
+				color: #f1f1f1;
+				}
+				
+				.sidenav .closebtn {
+				position: absolute;
+				top: 0;
+				right: 5px;
+				font-size: 36px;
+				margin-left: 50px;
+				}
+
+				#main {
+				transition: margin-left .5s;
+				padding: 16px;
+				}
+				
+				@media screen and (max-height: 450px) {
+				.sidenav {padding-top: 15px;}
+				.sidenav a {font-size: 18px;}
+				}
+
+		</style>
+</head>
+
+<body>
+	<div class="tu2">
+		<span>มหาวิทยาลัยธรรมศาสตร์</span>
+		<style>*{
+		  box-sizing: border-box;
+	  }
+	  body{
+		  font-size: 14px;
+	  }
+	.tu2{
+	width: 400px;
+	height: 100px;
+	opacity: 1;
+	position: fixed;
+	top: 5px;
+	left: 350px;
+	overflow: hidden;
+	z-index: 6;
+	color: #ffffff;
+	font-family: prompt;
+	font-weight: regular;
+	font-size: 31px;
+	
+	}
+	  </style>
+	
+	  </div>
+	  <div class="line">
+		<style>* {
+			box-sizing: border-box;
+		  }
+		  body {
+			font-size: 14px;
+		  }
+		  .line {
+			width: 307px;
+	  height: 3px;
+	  background: rgba(214,123,2,1);
+	  opacity: 1;
+	  position: fixed;
+	  top: 80px;
+	  left: 350px;
+	  overflow: hidden;
+	  z-index: 10;
+	
+		  }
+		  </style>
+	</div>
+		
+	<header>
+		<div class="tu1">
+		  <span>THAMMASAT UNIVERSITY</span>
+		  <style>*{
+			box-sizing: border-box;
+		}
+		body{
+			font-size: 14px;
+		}
+	  .tu1{
+	  width: 400px;
+	  height: 100px;
+	  opacity: 1;
+	  position: fixed;
+	  top: 42px;
+	  left: 350px;
+	  overflow: hidden;
+	  z-index: 6;
+	  color: #ffffff;
+	  font-family: prompt;
+	  font-weight: regular;
+	  font-size: 26px;
+	  
+	  }
+		</style>
+	  
+		</div>
+
+		<div class="menubar">
+      
+		<div class="topbar">
+			<style>*{
+					box-sizing: border-box;
+				}
+				body{
+					font-size: 14px;
+				}
+				.topbar{
+					width: 100%;
+					height: 100px;
+					background: rgba(0,0,0,0.75);
+					opacity: 1;
+					position: fixed;
+					top: 0px;
+					left: 200px;
+					overflow: hidden;
+					z-index: 3;
+					}
+			</style>
+		</div>
+
+		<div class="leftbar">
+				
+			<style>*{
+						box-sizing: border-box;
+					}
+				body{
+						font-size: 14px;
+					}
+				.leftbar{
+					width: 200px;
+					height: 100px;
+					background: rgba(214,123,2,1);
+					opacity: 1;
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					overflow: hidden;
+					z-index: 2;
+					}
+				
+			</style>
+		</div>
+		
+		<div class="Menu">
+				<nav>
+		<div class="logo">
+				<style>*{
+					box-sizing: border-box;
+						}
+				body{
+					font-size: 14px;
+					}
+				.logo{
+					width: 90px;
+					height: 90px;
+					background: url("https://upload.wikimedia.org/wikipedia/commons/3/32/Emblem_of_Thammasat_University.svg");
+					opacity: 1;
+					position: fixed;
+					top: 5px;
+					left: 228px;
+					overflow: hidden;
+					z-index: 5;
+					}
+				</style>
+		</div>
+		
+		<ul>
+			<li>
+				<a href="#" class="btn1">คำร้อง</a>
+				<style>*{
+						box-sizing: border-box;
+					}
+					body{
+						font-size: 14px;
+					}
+					.btn1{
+						width: 100px;
+						height: 68px;
+						background: rgba(0,0,0,0);
+						opacity: 1;
+						position: fixed;
+						top: 25px;
+						left: 1050px;
+						overflow: hidden;
+						z-index: 4;
+						color: #ffffff;
+						font-family: Prompt;
+						font-weight: semibold;
+						font-size: 26px;
+						text-decoration: none;
+						}
+				</style>
+			</li>
+
+			<li>
+				<a href="/tracking" class="btn2">สถานะคำร้อง</a>
+				<style>*{
+					box-sizing: border-box;
+					}
+					body{
+					font-size: 14px;
+					}
+				.btn2{
+					width: 200px;
+					height: 68px;
+					background: rgba(0,0,0,0);
+					opacity: 1;
+					position: fixed;
+					top: 25px;
+					left: 1235px;
+					overflow: hidden;
+					z-index: 4;
+					color: #ffffff;
+					font-family: Prompt;
+					font-weight: semiblod;
+					font-size: 26px;
+					text-decoration: none;
+				
+					}
+				</style>
+			</li>
+
+			<li>
+				<a href="#" class="btn3">ออกจากระบบ</a>
+				<style>*{
+					box-sizing: border-box;
+				}
+				body{
+					font-size: 14px;
+				}
+				.btn3{
+					width: 150px;
+					height: 68px;
+					background: rgba(0,0,0,0);
+					opacity: 1;
+					position: fixed;
+					top: 25px;
+					left: 1510px;
+					overflow: hidden;
+					z-index: 4;
+					color: #ffffff;
+					font-family: Prompt;
+					font-weight: semibold;
+					font-size: 24px;
+					text-decoration: none;
+					}
+				</style>
+			</li>
+		</ul>
+		
+		
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#"><h2>คำร้อง</h2></a>
+			<a href="/form">เพิ่มถอนรายวิชา</a>
+			<a href="/formslow">เพิ่มถอนรายวิชาล่าช้า</a>
+			<a href="/drop">Drop W</a>
+			<a href="/quit">ลาออก</a>
+			<br>
+			<a href="/home"><h3>HOME</h3></a>
+			<a href="/"><h3>LOGOUT</h3></a>
+		  </div>
+
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "200px";
+			  document.getElementById("main").style.marginLeft = "0px";
+		
+			}
+			
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			  document.getElementById("main").style.marginLeft= "0";
+			}
+		</script>
+
+		<div id="main">
+			
+			<span style="font-size:50px;cursor:pointer; position: fixed; top: 15px; z-index: 3; color: #ffffff;" onclick="openNav()">>></span>
+
+		</div>
+	<link rel="icon" type="image/x-ico" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Emblem_of_Thammasat_University.svg/1200px-Emblem_of_Thammasat_University.svg.png">
+				
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Emblem_of_Thammasat_University.svg/1024px-Emblem_of_Thammasat_University.svg.png" height="130" align = 'right'; style="margin-right:20px;margin-top:30px">	
+		<br>
+            <h1 align="right" style="color:#C3002F"><i>คำร้องขอเพิ่ม-ถอน รายวิชา</i>&emsp;</h1>
+            <h2 align="right" >คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต &emsp;</h2>
+            <br>
+				<div style="border-bottom: 10px solid #C3002F;margin-left:30px;margin-right:30px;"></div> 
+				<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+	<div class="container"></div>
+	<div class="margin">
+		<form action="/action_page.php" id="input_form">	
+
+				<div class="date" align="right" margin style="margin-right: 20px;font-size :18px"><b>วันที่/เดือน/ปี ::</b>	
+							<label for="date" id="date"></label>			
+				</div>
+
+				<!-- <label for="name_head" style="margin-left: 20px;">เรื่อง</label>
+						<input type="text" id="name_head" name="name_head"style="border: none; border-bottom: 1px navy double;">
+
+				<label><p style="margin-left: 20px;" >เรียน คณบดีคณะวิทยาศาสตร์และเทคโนโลยี</p></label> -->
+		<fieldset style="margin: 20px;">
+				<legend>
+						<label for="data"><b>&nbsp;&#128100;&nbsp;ข้อมูลนักศึกษา</b></label>
+				</legend>
+
+
+				<label for="fname">&emsp;&emsp;&emsp; ชื่อ <span style="color:red">*</span></label>		
+       			<select name="nametitle" required>
+      					<center><option value="">--คำนำหน้า--</option></center>
+    						<option value="Mr">นาย</option>
+    						<option value="Miss">นางสาว</option>
+    						<option value="Ms">นาง</option> 
+   					</select> 
+     						<input type="text" id="fname" name="fname"style="border: none; border-bottom: 1px navy double" title="กรุณากรอกชื่อของท่าน"required>
+				
+
+				<label for="lname">นามสกุล <span style="color:red">*</span></label>
+     						<input type="text" id="lname" name="lname"style="border: none; border-bottom: 1px navy double" title="กรุณากรอกนามสกุลของท่าน"required>
+     		
+
+     		<label for="studentID">เลขทะเบียนนักศึกษา<span style="color:red">*</span></label>
+								<input type="text" id="studentID" name="studentID"style="border: none; border-bottom: 1px navy double "maxlength="10" pattern="[0-9]{10,}" title="กรุณากรอกเลขนักศึกษา 10 หลักเท่านั้น" required>
+			
+
+				<label for="yeartitle"> ชั้นปีการศึกษา<span style="color:red">*</span></label>
+     				<select name="yeartitle" required>
+      					<center><option value=""> ---- </option></center>
+    			      <option value="year1"> 1 </option>
+    			      <option value="year2"> 2 </option>
+    			      <option value="year3"> 3 </option>
+    			      <option value="year4"> 4 </option> 
+   			        <option value="year5"> 5 </option>
+    			      <option value="year6"> 6 </option>
+    			      <option value="year7"> 7 </option>
+   			    </select> </p>
+       		
+
+       	<p><label for="major">สาขาวิชา<span style="color:red">*</span></label>
+       			<select name="major" required>
+      					<center><option value="">--------------------------------------สาขา--------------------------------------</option></center>
+    					  <option value="สาขาวิชาคณิตศาสตร์"> สาขาวิชาคณิตศาสตร์</option> 
+         			  <option value="สาขาวิชาคณิตศาสตร์(คณิตศาสตร์การเงิน)">สาขาวิชาคณิตศาสตร์ (คณิตศาสตร์การเงิน)</option>
+         			  <option value="สาขาวิชาคณิตศาสตร์การจัดการ">สาขาวิชาคณิตศาสตร์การจัดการ</option> 
+         			  <option value="สาขาวิชาคณิตศาสตร์ประยุกต์">สาขาวิชาคณิตศาสตร์ประยุกต์</option> 
+         			  <option value="สาขาวิชาวิทยาการประกันภัย">สาขาวิชาวิทยาการประกันภัย</option> 
+         			  <option >สาขาวิชาสถิติ</option>
+         			  <option value="สาขาวิชาสถิติ(สถิติประยุกต์)">สาขาวิชาสถิติ(สถิติประยุกต์)</option> 
+         			  <option value="สาขาวิชาเคมี">สาขาวิชาเคมี</option>
+         			  <option value="สาขาวิชาเทคโนโลยีพลังงานชีวภาพและการแปรรูปเคมีชีวภาพ">สาขาวิชาเทคโนโลยีพลังงานชีวภาพและการแปรรูปเคมีชีวภาพ</option> 
+         			  <option value="สาขาวิชาเทคโนโลยีชีวภาพ">สาขาวิชาเทคโนโลยีชีวภาพ</option>
+         			  <option value="สาขาวิชาฟิสิกส์">สาขาวิชาฟิสิกส์</option> 
+         			  <option value=" สาขาวิชาฟิสิกส์อิเล็กทรอนิกส์">สาขาวิชาฟิสิกส์อิเล็กทรอนิกส์</option>
+         			  <option value=" สาขาวิชาเทคโนโลยีการเกษตร">สาขาวิชาเทคโนโลยีการเกษตร</option> 
+         			  <option value="สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม ">สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม</option>
+         			  <option  value="สาขาวิชาเทคโนโลยีเพื่อการพัฒนายั่งยืน ">สาขาวิชาเทคโนโลยีเพื่อการพัฒนายั่งยืน</option> 
+         			  <option value="สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์และวิทยาการสารสนเทศ)" >สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์และวิทยาการสารสนเทศ)</option> 
+         			  <option value="สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์ประยุกต์)">สาขาวิชาวิทยาการคอมพิวเตอร์ (คอมพิวเตอร์ประยุกต์)</option> 
+         			  <option value="สาขาวิชาวิทยาการคอมพิวเตอร์ (เทคโนโลยีการเรียนรู้)">สาขาวิชาวิทยาการคอมพิวเตอร์ (เทคโนโลยีการเรียนรู้)</option>
+         			  <option value="สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร">สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+         			  <option  value="สาขาวิชาวิทยาศาสตร์และนวัตกรรมทางอาหาร">สาขาวิชาวิทยาศาสตร์และนวัตกรรมทางอาหาร</option> 
+         			  <option  value="สาขาวิชาวิทยาศาสตร์และเทคโนโลยีสิ่งทอ">สาขาวิชาวิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option> 
+         			  <option  value="สาขาวิชาวัสดุศาสตร์">สาขาวิชาวัสดุศาสตร์</option> 
+   					</select> 
+				</p>
+		</fieldset>
+
+
+		<fieldset style="margin: 20px;">
+				<legend>
+						<label for="address"><b>&nbsp;&#127960;&nbsp;ที่อยู่ที่สามารถติดต่อได้ทางไปรษณีย์</b></label>
+				</legend>
+	
+	
+				<label for="numHome">&emsp;&emsp;&emsp;บ้านเลขที่<span style="color:red">*</span></label>
+						<input type="text" id="numHome" name="numHome"style="border: none; border-bottom: 1px navy double;width: 130px"title="กรุณากรอกบ้านเลขที่"required>
+
+				<label for="moo">หมู่ที่<span style="color:red">*</span></label>
+							<input type="text" id="moo" name="moo"style="border: none; border-bottom: 1px navy double;width: 50px" title="กรุณากรอกหมู่" required>		
+
+				<label for="tambon">ตำบล<span style="color:red">*</span></label>
+							<input type="text" id="tambon" name="tambon"style="border: none; border-bottom: 1px navy double;width: 130px" title="กรุณากรอกตำบล"required>
+
+				<label for="district">อำเภอ<span style="color:red">*</span></label>
+							<input type="text" id="district" name="district"style="border: none; border-bottom: 1px navy double;width: 130px" title="กรุณากรอกอำเภอ"required>
+
+				<label for="province">จังหวัด<span style="color:red">*</span></label>
+							<input type="text" id="province" name="province"style="border: none; border-bottom: 1px navy double;width: 150px" title="กรุณากรอกจังหวัด"required>
+
+				<label for="postal_code">รหัสไปรษณีย์<span style="color:red">*</span></label>
+							<input type="text" id="postal_code" name="postal_code"style="border: none; border-bottom: 1px navy double;width: 130px"maxlength="5" pattern="[0-9]{5}" title="กรุณากรอกเลขรหัสไปรษณีย์ 5 หลักเท่านั้น"required>
+					
+					<br>
+
+				<label for="phone_num">โทรศัพท์มือถือ<span style="color:red">*</span></label>
+							<input type="text" id="phone_num" name="phone_num"style="border: none; border-bottom: 1px navy double;width: 130px" maxlength="10" pattern="[0]{1}[0-9]{9}" title="กรุณากรอกเลขโทรศัพท์มือถือ 10 หลักเท่านั้นและกรอกให้ถูกต้อง" required>
+
+				<label for="phone_house">โทรศัพท์บ้าน(ถ้ามี)</label>
+							<input type="text" id="phone_house" name="phone_house"style="border: none; border-bottom: 1px navy double"maxlength="10"pattern="[0]{1}[1]{1}[0-9]{8}">
+					
+					<br>
+
+				<label for="teacher">อาจารย์ที่ปรึกษา<span style="color:red">*</span></label>
+							<input type="text" id="teacher" name="teacher"style="border: none; border-bottom: 1px navy double" title="กรุณากรอกเลขชื่ออาจารย์ที่ปรึกษา"required>
+	
+		</fieldset>
+          <br>
+            <p><b style="color:#C3002F;font-size :20px">&emsp;&emsp;นักศึกษามีความประสงค์ที่จะเพิ่ม/ถอนรายวิชา</b></p>
+            		<label for="add" style="margin-left: 20px;">จำนวนรายวิชาที่เพิ่ม:&emsp;
+            				<button type="button" onclick="addTable()">+</button>
+            						<input type="text" id="numberAdd" value="0" />
+            				<button type="button" onclick="deleteTable()">-</button></label>
+
+            <br><br>
+
+		<table id="addSubject" style="width:100%">
+  			<tr>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ลำดับ</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">รหัสวิชา</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ชื่อวิชา</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">Section</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">วัน/เวลา</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">หน่วยกิต</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ชื่อผู้สอน</center></th>
+            <th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ผู้สอนอนุญาต</center></th>
+  			</tr>
+		</table>
+
+  			<br>
+
+							<label for="withdraw" style="margin-left: 20px;">จำนวนรายวิชาที่ถอน:&emsp;
+            		<button type="button" onclick="addTable2()">+</button>
+              			<input type="text" id="numberWithdraw" value="0" />
+            		<button type="button" onclick="deleteTable2()">-</button>
+							</label>
+
+        <br><br>
+
+		<table id="withdrawSubject" style="width:100%">
+   			<tr>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ลำดับ</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">รหัสวิชา</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ชื่อวิชา</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">Section</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">วัน/เวลา</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">หน่วยกิต</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ชื่อผู้สอน</center></th>
+    				<th><center style="background-color: rgba(255, 209, 63,0.65);font-size :17px">ผู้สอนอนุญาต</center></th>
+  			</tr>	
+		</table>
+
+			<br>
+
+					<label for="reason" name="reason">&emsp;&emsp;เหตุผลที่เพิ่ม/ถอน<span style="color:red">*</span></label>
+
+			<br>
+
+      		&emsp;&emsp;<textarea id="review" name="review" rows="4" cols="50" required></textarea>
+    
+    	<br><br>
+
+    			<b style="margin:2%; color:#c80815;font-size :18px">สิ่งที่ต้องส่งมาด้วย</b>&emsp;&emsp;
+     					<input type="file" name="reason" style="margin: unset; padding: unset; border: unset; border-radius: unset; width: 2000px;"> </p> 
+        	
+        	<br>
+
+     			<div class="sub"><button class="button-17" role="button" style="background-color:#C3002F" ><center><input type="SUBMIT" name="SUBMIT" value="SUBMIT" style="width: 100px; height: 50px; border: none;color:white"></center></button></div>
+
+		</form>
+	</div>
+
+</body>
+<script>
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+var yyyy = today.getFullYear();
+today = dd + '/' + mm + '/' + (yyyy+543);
+document.getElementById('date').innerHTML=today;
+
+var countAdd=0;
+var countDelete=0;
+var value = parseInt(document.getElementById('numberAdd').value, 10);
+var valueWithdraw = parseInt(document.getElementById('numberWithdraw').value, 10);
+
+addTable();
+function addTable() {
+  value = isNaN(value) ? 0 : value;
+    if(value<10 && (value+valueWithdraw)<10)  {
+          value<10? value++ : value=10;
+        document.getElementById('numberAdd').value = value;
+        var table = document.getElementById("addSubject");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        cell1.innerHTML = value;
+        cell2.innerHTML = `<input type="text" id="class_numAdd" name="${value}class_numAdd" style="border:1; width: 100px" required>`;
+        cell3.innerHTML = `<input type="text" id="class_nameAdd" name="${value}class_nameAdd" style="border:1; width: 150px"required>`;
+        cell4.innerHTML = `<input type="text" id="secAdd" name="${value}secAdd" style="border:1;width: 70px"required>`;
+        cell5.innerHTML = `<label for="selector"><select id="dateStart" name="${value}dateStart" required> <option value="">--Date--</option><option value="จันทร์">Mon.</option><option value="อังคาร">Tue.</option><option value="พุธ">Wed.</option> <option value="พฤหัสบดี">Thr.</option> <option value="ศุกร์">Fri.</option><option value="เสาร์">Sat.</option><option value="อาทิตย์">Sun.</option></select>&nbsp;<label for="selector"><input id="timeStart" type="time" name="${value}timeStart" required>&nbsp;to&nbsp;<input id="timeStop" type="time" name="${value}timeStop" required><br><label for="selector"><select id="dateStop" name="${value}dateStop"><option value="" selected >--Date--</option><option value="จันทร์">Mon.</option><option value="อังคาร">Tue.</option><option value="พุธ" >Wed.</option> <option value="พฤหัสบดี">Thr.</option> <option value="ศุกร์">Fri.</option><option value="เสาร์">Sat.</option> <option value="อาทิตย์">Sun.</option></select>&nbsp;<label for="selector"><input id="timeStart2" type="time" name="${value}timeStart2">&nbsp;to&nbsp;<input id="timeStop2" type="time" name="${value}timeStop2">`;
+        cell6.innerHTML = `<select name="${value}unit" required><option value=""> --หน่วยกิต-- </option><option value="0.5"> 0.5 </option><option value="1"> 1 </option><option value="1.5"> 1.5 </option><option value="2"> 2 </option><option value="2.5"> 2.5 </option><option value="3"> 3 </option></select>`;
+        cell7.innerHTML = `<input type="text" id="name_teachAdd" name="${value}name_teachAdd" style="border:1; width: 150px" required>`;
+        cell8.innerHTML = `<input id="allowAdd" type="checkbox" name="${value}allowAdd" value="add">`;
+        countAdd++;
+
+      } 
+  }
+  
+function deleteTable() {
+ value = isNaN(value) ? 0 : value;
+    if(value>0 && (value+valueWithdraw)>1){
+      value>0? value--:value=0;
+       document.getElementById('numberAdd').value = value;
+        var table = document.getElementById("addSubject");
+        var row = table.deleteRow(-1);
+        countAdd--;
+    }          
+}
+function addTable2() {
+   valueWithdraw = isNaN(value) ? 0 : valueWithdraw;
+    if(valueWithdraw<10 && (value+valueWithdraw)<10 )  {
+          valueWithdraw<10? valueWithdraw++ : valueWithdraw=10;
+        document.getElementById('numberWithdraw').value = valueWithdraw;
+        var table = document.getElementById("withdrawSubject");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        cell1.innerHTML = valueWithdraw;
+        cell2.innerHTML = `<input type="text" id="class_numWithdraw" name="${valueWithdraw}class_numWithdraw" style="border:1; width: 100px";>`;
+        cell3.innerHTML = `<input type="text" id="class_nameWithdraw" name="${valueWithdraw}class_nameWithdraw" style="border:1; width: 150px";>`;
+        cell4.innerHTML = `<input type="text" id="secWithdraw" name="${valueWithdraw}secWithdraw" style="border:1; width: 70px";>`;
+        cell5.innerHTML = `<label for="selector"><select id="dateStart_W" name="${valueWithdraw}dateStart_W" required> <option value="">--Date--</option><option value="จันทร์">Mon.</option><option value="อังคาร">Tue.</option><option value="พุธ">Wed.</option> <option value="พฤหัสบดี">Thr.</option> <option value="ศุกร์">Fri.</option><option value="เสาร์">Sat.</option><option value="อาทิตย์">Sun.</option> </select><label for="selector"> <input id="timeStart_W" type="time" name="${valueWithdraw}timeStart_W"required>&nbsp;to&nbsp;<input id="timeStop_W" type="time" name="${valueWithdraw}timeStop_W" required><br><label for="selector"><select id="dateStop_W" name="${valueWithdraw}dateStop_W"><option value="" selected >--Date--</option><option value="จันทร์">Mon.</option><option value="อังคาร">Tue.</option><option value="พุธ" >Wed.</option> <option value="พฤหัสบดี">Thr.</option> <option value="ศุกร์">Fri.</option><option value="เสาร์">Sat.</option> <option value="อาทิตย์">Sun.</option></select>&nbsp;<label for="selector"><input id="timeStart2_W" type="time" name="${valueWithdraw}timeStart2_W">&nbsp;to&nbsp;<input id="timeStop2_W" type="time" name="${valueWithdraw}timeStop2_W">`;
+        cell6.innerHTML = `<select id="unitWithdraw"name="${valueWithdraw}unitWithdraw"><option value=""> --หน่วยกิต-- </option><option value="0.5"> 0.5 </option><option value="1"> 1 </option><option value="1.5"> 1.5 </option><option value="2"> 2 </option><option value="2.5"> 2.5 </option><option value="3"> 3 </option></select>`;
+        cell7.innerHTML = `<input type="text" id="name_teachWithdraw" name="${valueWithdraw}name_teachWithdraw" style="border:1; width: 150px"required>`;
+        cell8.innerHTML = `<input id="allowAdd" type="checkbox" name="${valueWithdraw}allowWithdraw" value="add">`;
+        countDelete++;
+    }
+}
+
+function deleteTable2() {
+   valueWithdraw = isNaN(value) ? 0 : valueWithdraw;
+      if(valueWithdraw>0 && (value+valueWithdraw)>1){
+      valueWithdraw>0? valueWithdraw--:valueWithdraw=0;
+       document.getElementById('numberWithdraw').value = valueWithdraw;
+        var table = document.getElementById("withdrawSubject");
+        var row = table.deleteRow(-1); 
+         countDelete--;
+   }
+}
+function checkBoolean(event) {
+  if(event=='add' ) {
+    return true;
+  } else {
+  return false;
+    }
+}
+
+
+function submitForm(e){
+    e.preventDefault();
+    const submit = new FormData(event.target);
+    var add = [];
+    for(var i=1; i<=countAdd; i++){
+        addSub={
+            subjectCode: submit.get(`${i}class_numAdd`),
+            subjectName: submit.get(`${i}class_nameAdd`),
+            subjectSection: submit.get(`${i}secAdd`),
+            subjectDate: submit.get(`${i}dateStart`)+" "+ submit.get(`${i}timeStart`)+" - "+ submit.get(`${i}timeStop`)+","+ submit.get(`${i}dateStop`)+" "+ submit.get(`${i}timeStart2`)+" - "+ submit.get(`${i}timeStop2`),
+            subjectCredit: submit.get(`${i}unit`),
+            subjectTeacher: submit.get(`${i}name_teachAdd`),
+            subjectTeacherCheck: checkBoolean(submit.get(`${i}allowAdd`))
+        }
+        add.push(addSub);
+    }
+    var drop = [];
+    for(var i=1; i<=countDelete; i++){
+        dropSub={
+            subjectCode: submit.get(`${i}class_numWithdraw`),
+            subjectName: submit.get(`${i}class_nameAdd`),
+            subjectSection: submit.get(`${i}secWithdraw`),
+            subjectDate: submit.get(`${i}dateStart_W`)+" "+ submit.get(`${i}timeStart_W`)+" - "+ submit.get(`${i}timeStop_W`)+","+ submit.get(`${i}dateStop_W`)+" "+ submit.get(`${i}timeStart2_W`)+" - "+ submit.get(`${i}timeStop2_W`),
+            subjectCredit: submit.get(`${i}unitWithdraw`),
+            subjectTeacher: submit.get(`${i}name_teachWithdraw`),
+            subjectTeacherCheck: checkBoolean(submit.get(`${i}allowWithdraw`))
+        }
+        drop.push(dropSub);
+    }
+    const info ={
+        date: today,
+        studentFirstName: submit.get('fname'),
+        studentLastName: submit.get('lname'),
+        studentId: submit.get('studentID'),
+        studentYear: submit.get('yeartitle'),
+        studyField: submit.get('major'),
+        advisor: submit.get('teacher'),
+        addressNumber: submit.get('numHome'),
+        moo: submit.get('moo'),
+        tumbol: submit.get('tambon'),
+        amphur: submit.get('district'),
+        province: submit.get('province'),
+        postalCode: submit.get('postal_code'),
+        mobilePhone: submit.get('phone_num'),
+        phone: submit.get('phone_house'),
+        cause: submit.get('review'),
+        addSubjectList: add,
+        dropSubjectList: drop
+        }
+           console.log(JSON.stringify(info,null,2));
+}
+   const form = document.querySelector('form');
+    form.addEventListener('submit', submitForm);
+
+</script>
+
+</html>
